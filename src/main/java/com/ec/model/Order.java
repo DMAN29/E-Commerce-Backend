@@ -42,7 +42,7 @@ public class Order {
 
     private LocalDateTime deliveryDate;
 
-    @OneToOne
+    @ManyToOne
     private Address shippingAddress;
 
     @Embedded
