@@ -70,6 +70,7 @@ public class PaymentController {
 			
 			paymentLinkRequest.put("callback_url",callbackUrl+"payment/"+orderId);
 			paymentLinkRequest.put("callback_method", "get");
+			
 			PaymentLink payment = razorpay.paymentLink.create(paymentLinkRequest);
 			
 			String paymentLinkId = payment.get("id");
