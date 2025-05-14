@@ -32,7 +32,6 @@ public class ProductController {
 		Page<Product> res = productService.getAllProduct(category, color, size, minPrice, maxPrice, minDiscount, sort,
 				stock, pageNumber, pageSize);
 
-		System.out.println("complete Products");
 
 		return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
 	}

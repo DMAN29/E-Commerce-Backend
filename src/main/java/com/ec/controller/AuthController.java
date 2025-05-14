@@ -1,5 +1,7 @@
 package com.ec.controller;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -63,6 +65,7 @@ public class AuthController {
 		createUser.setFirstName(firstName);
 		createUser.setLastName(lastName);
 		createUser.setRole("ROLE_USER");
+		createUser.setCreatedAt(LocalDateTime.now());
 		
 		User savedUser = userRepository.save(createUser);
 		Cart cart = cartService.createCart(savedUser);
